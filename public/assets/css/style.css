@@ -1,0 +1,218 @@
+:root {
+    --background-light: #F0F2FA;
+    --background-white: #F6F5FF;
+    --text-dark: #0A0040;
+    --color-primary:#6143FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-white);
+}
+
+.container{
+    display: flex;
+    width:100%;
+    height: 100%;
+}
+
+.sidebar{
+    background-color: var(--color-primary);
+    width: 100px;
+}
+.sidebar img{
+    max-width: 100%;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+nav{
+    height: 100px;
+    background-color: var(--background-light);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.btn {
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    border: 0;
+    cursor: pointer;
+}
+.btn:hover{
+    transform:scale(1.05);
+}
+a.btn{
+    margin-left: 5px;
+    text-decoration: none;
+}
+.btn-primary{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    overflow-x: hidden;
+}
+section.graph {
+    flex: 1;
+    padding-right: 20px;
+}
+.graph_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.graph_header h2 {
+    flex: 2;
+    font-size: 18px;
+    display: inline-block;
+}
+.graph_header-line{
+    width: 100px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.graph_header-date {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7px;
+}
+
+.graph-placeholer {
+    background-color: #ccc;
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    text-align: center;
+    background: url('/assets/images/graph.png');
+    background-size: contain;
+}
+.tasks_left_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+section.list {
+    flex: 3;
+    padding-left: 20px;    
+}
+
+.list_header-select {
+    background-color: transparent;
+    border: 0;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--text-dark);
+}
+
+.task_list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 15px;    
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--background-light);
+    transition: all .3s ease-in-out;
+}
+.task:hover{
+    background-color: var(--background-light);
+    transform: scale(1.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.title, .priority, .actions {
+    flex: 1;
+}
+.title {
+    display: flex;
+    align-items: center;
+}
+.task_title {
+    padding-left: 10px;
+    font-weight: bold;
+}
+.priority {
+    display: flex;
+    align-items: center;
+}
+.sphere {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;   
+    margin-right: 10px;
+}
+.actions {
+    text-align: right;
+}
+.actions a {
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.actions a img {
+    transition: all .3s ease-in-out;
+}
+.actions a img:hover{
+    transform: scale(1.5);
+}
+
+
+
+#task_section {
+    margin: auto;
+}
+#task_section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.inputArea{
+    display: block;
+    margin: 10px 0px 20px 0px;
+}
+.inputArea label {
+    display: block;
+    margin-left: 5px;
+}
+.inputArea input,
+.inputArea select {
+    height: 40px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+.inputArea textarea {
+    height: 100px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
